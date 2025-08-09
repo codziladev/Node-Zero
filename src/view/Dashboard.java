@@ -15,7 +15,7 @@ public class Dashboard extends javax.swing.JFrame {
     public Dashboard() {
         this.setUndecorated(true);
         UIManager.put("InternalFrame.activeTitleBackground", Color.RED);
-
+//sdaksdkasdmn
         initComponents();
         
         p1.putClientProperty(FlatClientProperties.STYLE, "arc:30");
