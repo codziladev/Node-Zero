@@ -46,7 +46,7 @@ public class Dashboard extends javax.swing.JFrame {
         getContentPane().addMouseMotionListener(ma);
         loadIcons();
     }
-    //Hello world
+    //Hello world sri lanka galaxyx 
     private void loadIcons() {
         closeBtn.setIcon(new FlatSVGIcon("view/images/close.svg", closeBtn.getWidth(), closeBtn.getHeight()));
         myAccount.setIcon(new FlatSVGIcon("view/images/account.svg", myAccount.getWidth(), myAccount.getHeight()));
