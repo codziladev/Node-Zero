@@ -18,7 +18,6 @@ public class Dashboard extends javax.swing.JFrame {
         //git test
         initComponents();
         
-        //Hello is that work
         
         p1.putClientProperty(FlatClientProperties.STYLE, "arc:30");
         p2.putClientProperty(FlatClientProperties.STYLE, "arc:30");
