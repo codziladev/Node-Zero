@@ -39,23 +39,24 @@ public class SignIn extends javax.swing.JFrame {
                 setLocation(newX, newY);
             }
         };
-        getContentPane().addMouseListener(ma);
-        getContentPane().addMouseMotionListener(ma);
-        
-        icon.setIcon(new FlatSVGIcon("view/images/dragon.svg"));
+            getContentPane().addMouseListener(ma);
+            getContentPane().addMouseMotionListener(ma);
 
-        email.putClientProperty(FlatClientProperties.STYLE, "arc:30");
-        password.putClientProperty(FlatClientProperties.STYLE, "arc:30");
+            icon.setIcon(new FlatSVGIcon("view/images/dragon.svg"));
 
-        next.putClientProperty(FlatClientProperties.STYLE, "arc:30");
+            email.putClientProperty(FlatClientProperties.STYLE, "arc:30");
+            password.putClientProperty(FlatClientProperties.STYLE, "arc:30");
 
-        close.setIcon(new FlatSVGIcon("view/images/close.svg", close.getWidth(), close.getHeight()));
+            next.putClientProperty(FlatClientProperties.STYLE, "arc:30");
 
-        google.putClientProperty(FlatClientProperties.STYLE, "arc:40");
-        googleIcon.setIcon(new FlatSVGIcon("view/images/google.svg", close.getWidth(), close.getHeight()));
+            close.setIcon(new FlatSVGIcon("view/images/close.svg", close.getWidth(), close.getHeight()));
 
-        galaxyx.putClientProperty(FlatClientProperties.STYLE, "arc:40");
-        galaxyxIcon.setIcon(new FlatSVGIcon("view/images/galaxyx.svg", close.getWidth(), close.getHeight()));
+            google.putClientProperty(FlatClientProperties.STYLE, "arc:40");
+            googleIcon.setIcon(new FlatSVGIcon("view/images/google.svg", close.getWidth(), close.getHeight()));
+
+            galaxyx.putClientProperty(FlatClientProperties.STYLE, "arc:40");
+            galaxyxIcon.setIcon(new FlatSVGIcon("view/images/galaxyx.svg", close.getWidth(), close.getHeight()));
+
 
     }
 
@@ -349,15 +350,12 @@ public class SignIn extends javax.swing.JFrame {
         String email = this.email.getText();
         String password = this.password.getText();
 
-        // Call API and get result
         JSONObject result = LoginAPI.loginUser(email, password);
 
         if (result.getBoolean("success")) {
-            // ✅ Login successful → Open Dashboard
             Dashboard dashboard = new Dashboard();
             dashboard.setVisible(true);
-            this.dispose(); // close login window
-            System.out.println("Token: " + result.getString("token"));
+            this.dispose();
         } else {
             
             Notifications.getInstance().setJFrame(this);
