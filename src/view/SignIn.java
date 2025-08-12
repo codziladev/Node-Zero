@@ -22,7 +22,7 @@ public class SignIn extends javax.swing.JFrame {
 
         int arc = 30;
         setShape(new RoundRectangle2D.Double(0, 0, getWidth(), getHeight(), arc, arc));
-
+        //dragging in window size
         MouseAdapter ma = new MouseAdapter() {
             Point mouseClickPoint;
 
@@ -30,7 +30,7 @@ public class SignIn extends javax.swing.JFrame {
             public void mousePressed(MouseEvent e) {
                 mouseClickPoint = e.getPoint();
             }
-
+        
             @Override
             public void mouseDragged(MouseEvent e) {
                 Point currCoords = getLocation();
