@@ -5,6 +5,9 @@ import com.formdev.flatlaf.FlatDarkLaf;
 import com.formdev.flatlaf.extras.FlatSVGIcon;
 import controller.LoginAPI;
 import java.awt.Desktop;
+import java.awt.Point;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.awt.geom.RoundRectangle2D;
 import java.net.URI;
 import javax.swing.JOptionPane;
@@ -20,6 +23,25 @@ public class SignIn extends javax.swing.JFrame {
         int arc = 30;
         setShape(new RoundRectangle2D.Double(0, 0, getWidth(), getHeight(), arc, arc));
 
+        MouseAdapter ma = new MouseAdapter() {
+            Point mouseClickPoint;
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+                mouseClickPoint = e.getPoint();
+            }
+
+            @Override
+            public void mouseDragged(MouseEvent e) {
+                Point currCoords = getLocation();
+                int newX = currCoords.x + e.getX() - mouseClickPoint.x;
+                int newY = currCoords.y + e.getY() - mouseClickPoint.y;
+                setLocation(newX, newY);
+            }
+        };
+        getContentPane().addMouseListener(ma);
+        getContentPane().addMouseMotionListener(ma);
+        
         icon.setIcon(new FlatSVGIcon("view/images/dragon.svg"));
 
         email.putClientProperty(FlatClientProperties.STYLE, "arc:30");
