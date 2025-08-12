@@ -197,7 +197,7 @@ public class Dashboard extends javax.swing.JFrame {
                         .addComponent(realTime, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel9)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, sidePanelLayout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(sidePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -213,9 +213,9 @@ public class Dashboard extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, sidePanelLayout.createSequentialGroup()
                                 .addComponent(jLabel6)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))))
-                .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 1, Short.MAX_VALUE))
+                .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(sidePanelLayout.createSequentialGroup()
-                .addContainerGap(47, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(sidePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(sidePanelLayout.createSequentialGroup()
                         .addComponent(disk, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -305,13 +305,11 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(12, 14, 19));
 
         myAccount.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        myAccount.setSize(new java.awt.Dimension(39, 17));
 
         jLabel1.setFont(new java.awt.Font("Poppins", 0, 36)); // NOI18N
         jLabel1.setText("Node Zero");
 
         more1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        more1.setSize(new java.awt.Dimension(39, 17));
 
         jLabel15.setFont(new java.awt.Font("Helvetica Neue", 0, 48)); // NOI18N
         jLabel15.setText("You're Protected");
@@ -372,7 +370,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel20)
-                .addContainerGap(11, Short.MAX_VALUE))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         p2.setBackground(new java.awt.Color(30, 34, 49));
@@ -399,7 +397,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel22)
-                .addContainerGap(9, Short.MAX_VALUE))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
 
         p3.setBackground(new java.awt.Color(30, 34, 49));
@@ -414,7 +412,7 @@ public class Dashboard extends javax.swing.JFrame {
             .addGroup(p3Layout.createSequentialGroup()
                 .addGap(48, 48, 48)
                 .addComponent(jLabel26)
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
         p3Layout.setVerticalGroup(
             p3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
