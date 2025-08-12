@@ -3,10 +3,13 @@ package view;
 import com.formdev.flatlaf.FlatClientProperties;
 import com.formdev.flatlaf.FlatDarkLaf;
 import com.formdev.flatlaf.extras.FlatSVGIcon;
+import controller.LoginAPI;
 import java.awt.Desktop;
 import java.awt.geom.RoundRectangle2D;
 import java.net.URI;
 import javax.swing.JOptionPane;
+import org.json.JSONObject;
+import raven.toast.Notifications;
 
 public class SignIn extends javax.swing.JFrame {
 
@@ -321,8 +324,28 @@ public class SignIn extends javax.swing.JFrame {
     }//GEN-LAST:event_rememberMeActionPerformed
 
     private void nextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextActionPerformed
-        Dashboard dashboard = new Dashboard();
-        dashboard.setVisible(true);
+        String email = this.email.getText();
+        String password = this.password.getText();
+
+        // Call API and get result
+        JSONObject result = LoginAPI.loginUser(email, password);
+
+        if (result.getBoolean("success")) {
+            // ✅ Login successful → Open Dashboard
+            Dashboard dashboard = new Dashboard();
+            dashboard.setVisible(true);
+            this.dispose(); // close login window
+            System.out.println("Token: " + result.getString("token"));
+        } else {
+            
+            Notifications.getInstance().setJFrame(this);
+           Notifications.getInstance().show(
+                    Notifications.Type.ERROR,
+                    Notifications.Location.BOTTOM_CENTER,
+                    2000,
+                    result.getString("message")
+            );
+        }
     }//GEN-LAST:event_nextActionPerformed
 
     public static void main(String args[]) {
