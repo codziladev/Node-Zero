@@ -8,7 +8,7 @@ import java.awt.geom.RoundRectangle2D;
 
 public class FullScan extends javax.swing.JFrame {
     public FullScan() {
-        //dock
+
         initComponents();
         loadIcons();
          int arc = 30;
