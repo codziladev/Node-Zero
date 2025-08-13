@@ -146,9 +146,24 @@ public class Dashboard extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Poppins", 0, 18)); // NOI18N
         jLabel2.setText("Dashboard");
+        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
+
+        nzLogo1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jLabel4.setFont(new java.awt.Font("Poppins", 0, 18)); // NOI18N
         jLabel4.setText("Quarantine");
+
+        scan.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        scan.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                scanMouseClicked(evt);
+            }
+        });
 
         jLabel5.setBackground(new java.awt.Color(51, 51, 51));
         jLabel5.setOpaque(true);
@@ -159,6 +174,12 @@ public class Dashboard extends javax.swing.JFrame {
 
         jLabel7.setFont(new java.awt.Font("Poppins", 0, 18)); // NOI18N
         jLabel7.setText("Full System");
+        jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7MouseClicked(evt);
+            }
+        });
 
         jLabel8.setFont(new java.awt.Font("Poppins", 0, 18)); // NOI18N
         jLabel8.setText("Smart Scan");
@@ -579,6 +600,20 @@ public class Dashboard extends javax.swing.JFrame {
     private void closeBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeBtnMouseClicked
         System.exit(0);
     }//GEN-LAST:event_closeBtnMouseClicked
+
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+        
+    }//GEN-LAST:event_jLabel2MouseClicked
+
+    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+        FullScan fullScan = new FullScan();
+        fullScan.setVisible(true);
+    }//GEN-LAST:event_jLabel7MouseClicked
+
+    private void scanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_scanMouseClicked
+        FullScan fullScan = new FullScan();
+        fullScan.setVisible(true);
+    }//GEN-LAST:event_scanMouseClicked
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
