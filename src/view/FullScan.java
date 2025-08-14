@@ -21,9 +21,6 @@ public class FullScan extends javax.swing.JFrame {
         whileScanning();
         
         jPanel2.putClientProperty(FlatClientProperties.STYLE, "arc:60");
-        //jPanel3.putClientProperty(FlatClientProperties.STYLE, "arc:60");
-        
-
         int arc = 30;
         setShape(new RoundRectangle2D.Double(0, 0, getWidth(), getHeight(), arc, arc));
     }
